@@ -15,7 +15,7 @@ jobs:
         run: |
           yarn add --dev fluent-svelte
           yarn run build
-          cd ../.../
+          cd ../../
           ls -laR
           
       - name: Deploy to GitHub Pages
