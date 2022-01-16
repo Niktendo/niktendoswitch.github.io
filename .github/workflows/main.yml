@@ -16,12 +16,6 @@ jobs:
           npm install
           npm run build
           
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.2.2
-        with:
-          branch: gh-pages
-          folder: public
-          
       - name: Upload artifact
         uses: actions/upload-artifact@v2.3.1
         with:
@@ -29,4 +23,9 @@ jobs:
            name: Arti
         # Directory containing files to upload
            path: ./
-           
+          
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        with:
+          branch: gh-pages
+          folder: public
