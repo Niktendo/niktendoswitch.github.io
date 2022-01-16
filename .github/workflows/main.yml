@@ -13,12 +13,12 @@ jobs:
 
       - name: Install and Build
         run: |
-          npm install
-          npm run build
+          yarn add --dev fluent-svelte
+          cd ../
           ls -laR
           
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.2.2
-        with:
-          branch: gh-pages
-          folder: ./.vercel_build_output
+#      - name: Deploy to GitHub Pages
+#        uses: JamesIves/github-pages-deploy-action@v4.2.2
+#        with:
+#          branch: gh-pages
+#          folder: ./.vercel_build_output
