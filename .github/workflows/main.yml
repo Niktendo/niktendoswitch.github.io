@@ -10,10 +10,9 @@ jobs:
   runs-on: ubuntu-latest
   steps:
     - uses: actions/checkout@v2
-
     - name: Install and Build
       run: |
-        npm i --save-dev fluent-svelte
+        npm install --save-dev fluent-svelte
         npm install
         npm run build
 			
