@@ -21,4 +21,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           branch: gh-pages
-          folder: ./src/routes/docs
+          folder: ./.vercel_build_output
