@@ -14,11 +14,12 @@ jobs:
       - name: Install and Build
         run: |
           yarn add --dev fluent-svelte
-          cd ../
+          yarn run build
+          cd ../.../
           ls -laR
           
-#      - name: Deploy to GitHub Pages
-#        uses: JamesIves/github-pages-deploy-action@v4.2.2
-#        with:
-#          branch: gh-pages
-#          folder: ./.vercel_build_output
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        with:
+          branch: gh-pages
+          folder: .
