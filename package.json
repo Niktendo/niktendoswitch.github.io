@@ -47,6 +47,7 @@
 	"devDependencies": {
 		"@fec/remark-a11y-emoji": "^3.1.0",
 		"@fluentui/svg-icons": "^1.1.154",
+		"@sveltejs/adapter-static": "^1.0.0-next.26",
 		"@sveltejs/adapter-vercel": "next",
 		"@sveltejs/kit": "^1.0.0-next.211",
 		"@sveltejs/svelte-repl": "^0.2.2",
