@@ -13,9 +13,8 @@ jobs:
 
       - name: Install and Build
         run: |
-          yarn add --dev fluent-svelte
-          yarn run build
-          cd ../../
+          npm i --save-dev fluent-svelte
+          npm i -D @sveltejs/adapter-static@next
           ls -laR
           
       - name: Deploy to GitHub Pages
