@@ -13,7 +13,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          npm i --save-dev fluent-svelte
+          npm i -D @sveltejs/adapter-static@next
           npm run
           ls -laR
           
