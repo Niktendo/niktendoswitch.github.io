@@ -1,6 +1,6 @@
 import path from "path";
 import preprocess from "svelte-preprocess";
-import vercel from "@sveltejs/adapter-vercel";
+import adapter from "@sveltejs/adapter-static";
 import cssnano from "cssnano";
 import autoprefixer from "autoprefixer";
 import prefixer from "postcss-variables-prefixer";
@@ -29,18 +29,13 @@ const config = {
 		})
 	],
 	kit: {
-		target: "body",
-		adapter: vercel(),
-		vite: {
-			plugins: [sveld()],
-			resolve: {
-				extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", "svg"],
-				alias: {
-					$site: path.resolve("src/site"),
-					"fluent-svelte": path.resolve("src/lib")
-				}
-			}
+		// hydrate the <div id="svelte"> element in src/app.html
+		 target: '#svelte',
+		 adapter: adapter({
+		   pages: 'build',
+		   assets: 'build',
+		   fallback: null
+		 })
 		}
-	}
 };
 export default config;
